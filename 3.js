@@ -1,5 +1,5 @@
-const original = 'abcdw'
-const modified = 'abcdww'
+const original = 'abcw'
+const modified = 'abcdw'
 
 
 function findNaughtyStep(original, modified) {
@@ -15,12 +15,12 @@ function findNaughtyStep(original, modified) {
 
     }
 
-    return modified.slice(original.length)
+    return modified.slice(original.length); 
   }
 
 
-
-
+console.log(
+  findNaughtyStep(original,modified))
 
 original === modified && console.log("son iguales");
 
