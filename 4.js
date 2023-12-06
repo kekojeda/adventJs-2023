@@ -1,6 +1,18 @@
 const a = 'hola (odnum)'
 const b = 'sa(u(cla)atn)s'
 
+function decode(message) {
+    const regex = /\(([^()]*)\)/;
+
+    while (regex.test(message)) {
+        message = message.replace(regex, (match, text) => text.split('').reverse().join(''));
+    }
+
+return message;
+}
+
+console.log(decode(message));
+
 
 let indexFirstOP = b.indexOf("(")
 let indexSecondOP = b.indexOf("(", indexFirstOP+1)
@@ -18,7 +30,7 @@ if(indexSecondOP != -1 ){
 
 }
 
-
+let regExp = /ee/
 
 
 console.log(indexFirstOP);
